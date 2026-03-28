@@ -26,6 +26,7 @@
           <option value="hard">Zor</option>
         </select>
         <button type="button" class="btn btn-play" id="btnPlay">Oyna</button>
+        <button type="button" class="btn-howto" id="btnHowto" aria-label="Nasıl oynanır">Nasıl oynanır? 📖</button>
       </div>
     </section>
 
@@ -69,6 +70,21 @@
     <select id="difficultySheet" class="sheet-select"></select>
     <button type="button" class="btn btn-block" id="btnNewGame">Yeni bulmaca</button>
     <button type="button" class="btn btn-block btn-ghost-sheet" id="btnCloseSettings">Kapat</button>
+    <button type="button" class="btn btn-block btn-ghost-sheet" id="btnShowIntro">Tanıtımı tekrar göster</button>
+  </div>
+
+  <div id="introOverlay" class="intro-overlay is-hidden" role="dialog" aria-modal="true" aria-labelledby="introTitle" aria-hidden="true">
+    <div class="intro-shell">
+      <button type="button" class="intro-skip" id="introSkip">Atla</button>
+      <div class="intro-emoji" id="introEmoji" aria-hidden="true">🔓</div>
+      <h2 class="intro-title" id="introTitle">Kriptogram</h2>
+      <p class="intro-text" id="introText"></p>
+      <div class="intro-dots" id="introDots" role="tablist" aria-label="Slayt"></div>
+      <div class="intro-nav">
+        <button type="button" class="intro-btn intro-btn-ghost" id="introPrev">Geri</button>
+        <button type="button" class="intro-btn intro-btn-main" id="introNext">İleri</button>
+      </div>
+    </div>
   </div>
 
   <script src="puzzles.js"></script>
